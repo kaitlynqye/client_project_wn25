@@ -1,0 +1,34 @@
+/* 
+html5doctor.com Reset Stylesheet
+Remove default margin and padding 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set base font and background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Ensure media elements are responsive */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Reset anchor styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
