@@ -53,7 +53,7 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
     padding: 10px;
     transition: background 0.3s ease;
@@ -164,7 +164,7 @@ footer {
 
 footer a {
     color: #ffcb05;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 footer a:hover {
