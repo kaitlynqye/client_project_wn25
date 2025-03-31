@@ -80,7 +80,6 @@ body.food-pantry-page nav ul li a[href="food_pantry.html"] {
     padding: 10px 15px;
 }
 
-
 /* Link Styles */
 a {
     text-decoration: underline;
@@ -99,12 +98,6 @@ a:active {
     color: #003366;
     text-decoration: underline;
 }
-
-/* Link visited links
-a:visited {
-    color: #551A8B;
-} */
-
 
 /* Main Content */
 main {
@@ -144,12 +137,6 @@ h3 {
     gap: 20px;
 }
 
-/* @media (min-width: 768px) {
-    .grid-layout {
-        grid-template-columns: 1fr 1fr;
-    }
-} */
-
 /* Images */
 figure {
     margin: 10px 0;
@@ -184,4 +171,112 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Challenge Element: Fade In for Sections */
+/* Initial state: Sections are hidden */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Active state: Sections fade in and move up */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reduce motion for users who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Deliverable #3: Secondary View (Tablet/Laptop) */
+/* 768px is a common breakpoint for tablet view */
+@media screen and (min-width: 768px) {
+    /* Adjust Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Adjust Navigation Bar */
+    nav ul {
+        justify-content: flex-end; /* Move nav to the right */
+        gap: 20px; /* Increase spacing between nav items */
+    }
+
+    nav ul li a {
+        padding: 12px 18px;
+        font-size: 1.2rem;
+    }
+
+    /* Main container layout */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 10px; 
+        max-width: 1000px; 
+        margin: auto;
+    }
+
+    /* Adjust section styles */
+    section {
+        width: 100%; 
+        padding: 15px;
+        margin: 0; 
+        box-shadow: none; 
+    }
+
+    /* Grid layout inside sections */
+    .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        gap: 15px; /* Reduce white space */
+    }
+
+    /* Ensure articles fit inside the grid properly */
+    .grid-layout article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Reduce extra white space in images */
+    figure {
+        margin: 0 auto;
+    }
+
+    /* Ensure images take up only necessary space */
+    figure img {
+        width: 60%;
+        height: auto;
+    }
+
+    /* Footer fixes */
+    footer {
+        margin-top: 20px; /* Ensure it doesn't float awkwardly */
+    }
+}
+
+/* 1024px is a common breakpoint for larger desktops */
+@media screen and (min-width: 1024px) {
+    nav ul {
+        gap: 30px; /* Increase spacing further */
+    }
+
+    main {
+        max-width: 1400px;
+    }
 }
